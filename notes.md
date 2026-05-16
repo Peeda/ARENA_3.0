@@ -31,3 +31,11 @@
 * make sure im comfortable with how this is more general than just implementing a neural network with hardcoded weights
 * review the matrix multiplication gradient derivation, this type of usage of chain rule as a sum still feels mysterious
     * probably relates to feeding forward vs pushing back, do you apply a forwards derivative operator or a backwards one
+* maybe look back over the tensor code? It feels like I'm kinda relying on type checking and there's some important wrapping stuff going unnoticed like for .T and stuff like that, want to get an understanding for how tensors are created on evaluating expressions
+## Part 5: VAEs and GANs
+* review the intuitions for kl, how it's the same as ce up to an additive factor
+* how do aes relate to pca, become prone to overfitting, and how do vaes fix this
+    * specifically how does the tradeoff between the two losses interpolate between extremes
+* what's the trick that allows us to backprop through sampling
+* it seems like both clumped/concentrated clustering is bad (ae) but also far apart clustering (which we avoid with kl right), understand both
+    * oh wait maybe the clumping was just bc the ae scale was larger (-10 to 10) whereas the vae uses -2 to 2 which is more like N(0,1)
